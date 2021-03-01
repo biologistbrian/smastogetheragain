@@ -10,7 +10,7 @@ if ( process.env.NEW_RELIC_HOME ) {
 var SAMPLE_STATS_INTERVAL = 60*1000; // 1 minute
 var SAMPLE_LOAD_INTERVAL = 5*60*1000; // 5 minutes
 var EMPTY_ROOM_LOG_TIMEOUT = 3*60*1000; // 3 minutes
-var WEBSOCKET_COMPAT = true;
+// var WEBSOCKET_COMPAT = true;
 
 // var WebSocketServer = WEBSOCKET_COMPAT ?
 //   require("./websocket-compat").server :
@@ -19,10 +19,10 @@ var WEBSOCKET_COMPAT = true;
 // var parseUrl = require('url').parse;
 // var fs = require('fs');
 
-var WebSocketServer = require("websocket").server;
-var http = require('http');
-var parseUrl = require('url').parse;
-var fs = require('fs');
+// var WebSocketServer = require("websocket").server;
+// var http = require('http');
+// var parseUrl = require('url').parse;
+// var fs = require('fs');
 
 // FIXME: not sure what logger to use
 //var logger = require('../../lib/logger');
@@ -218,17 +218,17 @@ function startServer(port, host) {
   });
 }
 
-var wsServer = new WebSocketServer({
-    httpServer: server,
-    // 10Mb max size (1Mb is default, maybe this bump is unnecessary)
-    maxReceivedMessageSize: 0x1000000,
-    // The browser doesn't seem to break things up into frames (not sure what this means)
-    // and the default of 64Kb was exceeded; raised to 1Mb
-    maxReceivedFrameSize: 0x100000,
-    // Using autoaccept because the origin is somewhat dynamic
-    // FIXME: make this smarter?
-    autoAcceptConnections: false
-});
+// var wsServer = new WebSocketServer({
+//     httpServer: server,
+//     // 10Mb max size (1Mb is default, maybe this bump is unnecessary)
+//     maxReceivedMessageSize: 0x1000000,
+//     // The browser doesn't seem to break things up into frames (not sure what this means)
+//     // and the default of 64Kb was exceeded; raised to 1Mb
+//     maxReceivedFrameSize: 0x100000,
+//     // Using autoaccept because the origin is somewhat dynamic
+//     // FIXME: make this smarter?
+//     autoAcceptConnections: false
+// });
 
 function originIsAllowed(origin) {
   // Unfortunately the origin will be whatever page you are sharing,
