@@ -38,7 +38,7 @@
     "grunt-lib-phantomjs": "~0.6.0",
     "highlight.js": "~7.3.0",
     "marked": "~0.3.4",
-    "nunjucks": "~0.1.8a",
+    "nunjucks": "0.1.8a",
     "optimist": "~0.6.0"
   },
   "engines": {
