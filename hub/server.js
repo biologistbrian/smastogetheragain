@@ -22,7 +22,7 @@ var EMPTY_ROOM_LOG_TIMEOUT = 3*60*1000; // 3 minutes
 // var WebSocketServer = require("websocket").server;
 // var http = require('http');
 // var parseUrl = require('url').parse;
-// var fs = require('fs');
+var fs = require('fs');
 
 // FIXME: not sure what logger to use
 //var logger = require('../../lib/logger');
